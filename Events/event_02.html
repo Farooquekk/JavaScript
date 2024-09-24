@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Chai or Code</h1>
+<button id="stop"> Stop </button>    
+</body>
+<script>
+        const name = function (){
+            console.log('farooque Sajjad');
+
+        }
+        const change = function changeName(){
+           document.querySelector('h1').innerHTML = 'best course on js';
+          
+        }
+
+    const changeMe = setTimeout(change,2000);
+
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe);
+        console.log("Stoped from changing the text");
+    })
+    // clearTimeout(changeMe);
+</script>
+</html>
