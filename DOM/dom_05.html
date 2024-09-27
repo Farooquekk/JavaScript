@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM --.> creation of element</title>
+</head>
+<body style="background-color: gray; color: white;">
+
+    <div class="container">
+     
+    </div>
+    
+</body>
+<script>
+
+function addElement(elementName){
+const h1 = document.createElement('h1');
+h1.appendChild( document.createTextNode(elementName));
+document.querySelector('.container').appendChild(h1);
+
+}
+addElement('Hello Ji');
+addElement('Hello Ji kon');
+addElement('DON?');
+addElement('I mean DOM Manipulation');
+
+// Editing
+
+// const firstH1 = document.querySelector('h1');
+// console.log(firstH1);
+// const newH1 = document.createElement('h1');
+// newH1.textContent = 'Hello ji I am new h1 ji .'
+// firstH1.replaceWith(newH1);
+
+// const secondH1 = document.querySelectorAll('h1');
+// console.log(secondH1[1]);
+// const newH1 = document.createElement('h1');
+// newH1.textContent = 'Hello ji I am new h1 ji .'
+// secondH1[1].replaceWith(newH1);
+
+// remove
+
+const lastH1 = document.querySelectorAll('h1');
+console.log(lastH1[lastH1.length-1]);
+lastH1[lastH1.length-1].remove();
+
+
+</script>
+
+
+</html>
