@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM 6</title>
+</head>
+<style>
+  body{
+    background-color:#212121;
+    
+
+  }
+  #container{
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    border: 3px solid yellow;
+  }
+  img{
+    width: 100px;
+    height: 100px;
+    
+
+  }
+
+</style>
+<body>
+    <div id="container">
+        <ul id="images">
+            <li id="img1"><img src="gencraft_image_1695177303917-1.png" alt=""></li>
+            <li id="img2"><img src="gencraft_image_1695209342434-1.png" alt=""></li>
+            <li id="img3"><img src="gencraft_image_1696251889569-1.png" alt=""></li>
+            <li id="img4"><img src="gencraft_image_1716524743028-1.png" alt=""></li>
+            <li id="img5"><img src="gencraft_image_1716524850375-1.png" alt=""></li>
+            <li id="google"><a href="http://google.com"></a>Google.com</li>
+        </ul>
+
+       
+    </div>
+</body>
+<script>
+
+// document.getElementById('img3').onclick = function() {
+//  alert('img 3 clicked');   
+// }
+// attachEvent()
+// jQuery-on
+
+
+
+// type,timestamp,defaultPrevented
+// target, toElement,srcElement,currentTarget,
+// clientX,ckientY,screenX,screenY
+// altKey, ctrlKey,shiftKey, keyCode  
+
+
+
+
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log('clicked inside the ul');
+// },false)
+
+// document.getElementById('img3').addEventListener('click',function(e){
+//     console.log('img 3 clicked'); // this is called bubbling 
+// },false) // this will move bottom to top
+
+// document.getElementById('images').addEventListener('click',function(e){
+//     console.log('clicked inside the ul');
+// },true)
+
+// document.getElementById('img3').addEventListener('click',function(e){
+//     console.log('img 3 clicked'); // this is called capturing
+    
+// },true) // this will top to bottom
+
+// document.getElementById('google').addEventListener('click',function(e){
+
+//   e.preventDefault();
+//   e.stopPropagation();
+//   console.log('google clicked');
+// },false);
+
+document.querySelector('#images').addEventListener('click',function(e){
+console.log(e.target.tagName);
+if(e.target.tagName==='IMG'){
+  console.log(e.target.id);
+  let removeIt = e.target.parentNode;
+  removeIt.remove();
+ 
+}
+// removeIt.parentNode.removeChild(removeIt);
+})
+
+
+
+</script>
+</html>
