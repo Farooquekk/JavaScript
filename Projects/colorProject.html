@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Project</title>
+   
+</head>
+<body>
+
+
+
+    <style>
+        div{
+            display: flex;
+          
+        }
+        h1{
+            font-size: 30px;
+            text-align: center;
+            text-decoration: underline;
+           
+        }
+        .button{
+            height: 100px;
+            width: 100px;
+            border: 3px solid black;
+            margin-right: 20px;
+            margin-top: 20px;
+             
+        }
+        #grey{
+            background-color: gray;
+        }
+        #white{
+            background-color: white;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #yellow{
+            background-color: yellow;
+        } 
+    </style>
+
+    <div>
+    <h1>Color Scheme Switcher</h1>
+    <br/>
+    <span class="button" id="grey"></span>
+    <span class="button" id="white"></span>
+    <span class="button" id="blue"></span>
+    <span class="button" id="yellow"></span>
+
+    <br/>
+
+    <h2> 
+        Try Clicking on one of the color above
+        <span>
+             To change the background color of this page
+        </span>
+
+    </h2>
+    </div>
+    <script >
+
+
+
+const butttons = document.querySelectorAll('.button');
+const body = document.querySelectorAll('body');
+
+butttons.forEach(function (button) {
+//    console.log(button);
+    button.addEventListener('click', function (eventKaObject) {
+        console.log(eventKaObject);
+        console.log(eventKaObject.target);
+         if (eventKaObject.target.id === 'grey') {
+             body.style.backgroundColor = eventKaObject.target.id;
+         }
+        if (eventKaObject.target.id === 'white') {
+            body.style.backgroundColor = eventKaObject.target.id;
+        }
+        if (eventKaObject.target.id === 'blue') {
+            body.style.backgroundColor = eventKaObject.target.id;
+        }
+        if (eventKaObject.target.id === 'yellow') {
+            body.style.backgroundColor = eventKaObject.target.id;
+        }
+        
+    });
+});
+
+
+    </script>
+    
+</body>
+</html>
